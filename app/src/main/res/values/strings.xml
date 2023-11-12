@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MADT_4_LAB</string>
+    <string name="note_name">Note Name</string>
+    <string name="note_content">Note Content</string>
+    <string name="empty_warning">Note name and content cannot be empty</string>
+    <string name="delete">Delete note</string>
+    <string name="add_note">Add Note</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="return_main_menu">Return to Main Menu</string>
 </resources>
