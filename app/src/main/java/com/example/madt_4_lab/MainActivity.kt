@@ -14,8 +14,8 @@ import android.widget.Toast
 import org.json.JSONArray
 
 class MainActivity : AppCompatActivity() {
-    private val notes = mutableListOf<Note>()
-    private lateinit var adapter: ArrayAdapter<Note>
+    public val notes = mutableListOf<Note>()
+    public lateinit var adapter: ArrayAdapter<Note>
     private lateinit var listView: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         refreshNotes()
     }
 
-    private fun loadNotes() {
+    public fun loadNotes() {
         val sharedPreferences = getSharedPreferences("notes", Context.MODE_PRIVATE)
         val json = sharedPreferences.getString("notes", "[]")
         val jsonArray = JSONArray(json)
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun refreshNotes() {
+    public fun refreshNotes() {
         notes.clear()
         loadNotes()
         adapter.notifyDataSetChanged()
